@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Multi-Timezone Clock</title>
+    <link rel="stylesheet" href="clock-style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🌍 Multi-Timezone Digital Clock</h1>
+        <p class="subtitle">Real-time display across different time zones</p>
+        
+        <div class="clock-grid">
+            <!-- São Paulo, Brazil -->
+            <div class="clock-card">
+                <div class="timezone-name">São Paulo</div>
+                <div class="timezone-code">BRT - UTC-3</div>
+                <div class="digital-time" id="clock-brasilia">00:00:00</div>
+                <div class="date" id="date-brasilia">Loading...</div>
+            </div>
+
+            <!-- New York, USA -->
+            <div class="clock-card">
+                <div class="timezone-name">New York</div>
+                <div class="timezone-code">EST - UTC-5</div>
+                <div class="digital-time" id="clock-newyork">00:00:00</div>
+                <div class="date" id="date-newyork">Loading...</div>
+            </div>
+
+            <!-- London, UK -->
+            <div class="clock-card">
+                <div class="timezone-name">London</div>
+                <div class="timezone-code">GMT - UTC+0</div>
+                <div class="digital-time" id="clock-london">00:00:00</div>
+                <div class="date" id="date-london">Loading...</div>
+            </div>
+
+            <!-- Paris, France -->
+            <div class="clock-card">
+                <div class="timezone-name">Paris</div>
+                <div class="timezone-code">CET - UTC+1</div>
+                <div class="digital-time" id="clock-paris">00:00:00</div>
+                <div class="date" id="date-paris">Loading...</div>
+            </div>
+
+            <!-- Tokyo, Japan -->
+            <div class="clock-card">
+                <div class="timezone-name">Tokyo</div>
+                <div class="timezone-code">JST - UTC+9</div>
+                <div class="digital-time" id="clock-tokyo">00:00:00</div>
+                <div class="date" id="date-tokyo">Loading...</div>
+            </div>
+
+            <!-- Sydney, Australia -->
+            <div class="clock-card">
+                <div class="timezone-name">Sydney</div>
+                <div class="timezone-code">AEDT - UTC+11</div>
+                <div class="digital-time" id="clock-sydney">00:00:00</div>
+                <div class="date" id="date-sydney">Loading...</div>
+            </div>
+
+            <!-- Dubai, UAE -->
+            <div class="clock-card">
+                <div class="timezone-name">Dubai</div>
+                <div class="timezone-code">GST - UTC+4</div>
+                <div class="digital-time" id="clock-dubai">00:00:00</div>
+                <div class="date" id="date-dubai">Loading...</div>
+            </div>
+
+            <!-- Singapore -->
+            <div class="clock-card">
+                <div class="timezone-name">Singapore</div>
+                <div class="timezone-code">SGT - UTC+8</div>
+                <div class="digital-time" id="clock-singapore">00:00:00</div>
+                <div class="date" id="date-singapore">Loading...</div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="add-timezone-btn" class="btn">+ Add Timezone</button>
+            <button id="reset-btn" class="btn btn-secondary">Reset to Default</button>
+        </div>
+
+        <div id="custom-timezone-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Add Custom Timezone</h2>
+                <input type="text" id="timezone-input" placeholder="e.g., America/Los_Angeles">
+                <input type="text" id="timezone-label" placeholder="e.g., Los Angeles">
+                <button id="add-custom-btn" class="btn">Add</button>
+                <p class="info-text">Use IANA timezone identifiers (e.g., Europe/Berlin, Asia/Bangkok)</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="clock-script.js"></script>
+</body>
+</html>
